@@ -41,8 +41,11 @@ class Engine:
         while True:
             # Get message from queue
             message_queue = self.get_message_queue()
-            message = message_queue.get()
-            self.process_message(message)
+            if message_queue:
+                message = message_queue[0]
+                self.process_message(message)
+                # Remove message from queue
+                self.get_message_queue().remove(message)
 
     def get_message_queue(self) -> List[Message]:
         # Simulate message queue for demonstration purposes
