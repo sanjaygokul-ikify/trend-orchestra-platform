@@ -1,0 +1,11 @@
+# Ignore the following files and directories
+
+*.idea/
+*.vscode/
+__pycache__/
+*.pyc
+*.log
+*.tmp
+node_modules/
+dist/
+build/
