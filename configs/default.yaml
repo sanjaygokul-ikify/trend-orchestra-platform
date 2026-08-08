@@ -1,0 +1,13 @@
+# Default configuration for Orchestra Platform
+
+agent:
+  count: 5
+  threads: 10
+central_hub:
+  host: localhost
+  port: 8000
+  username: admin
+  password: password
+real_time_analytics:
+  enabled: true
+  interval: 10
